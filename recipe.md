@@ -1,5 +1,6 @@
 # Sugar Cookies!
 
+# This is a family friendly cookie dish that you can bring to parties, movies, and games! It's a quick recipe that everybody is sure to love!
 
 ## Ingredients!
 - 2.75 cups **all-purpose flour**
