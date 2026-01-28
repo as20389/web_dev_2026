@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Form elements</title>
+  </head>
+  <body>
+    <!-- control + '/' to comment in any code language -->
+    <p>
+      Here is an HTML form containing basic input types. For more information
+      and more input types visit W3 Schools
+    </p>
+    <!-- The form tag itself has no visuals,
+        but all input elements wrapped by the form will be grouped
+        and submitted together but name. We also get browser default behaviours we want/need -->
+
+    <!-- form actions point to the file or function or 
+        Restful API endpoint to process the form data -->
+
+    <!--The method attribute is where you assign which 
+        HTTPS method you want to use to submit your form DATA
+
+        GET = Usually to retrieve data (read) from the endpoint - form data is in your URL
+
+        POST = Usually to write data to a new DB entry, form data is in the request body
+
+        DELETE = To delete a record - usually need some sort of unique identifier 
+        passed to the API endpoint or DB to know which one to edit or delete-->
+
+    <form action="'login.js" method="GET" target="_self" name="userSignup">
+      <!-- This is an old school HTML only way of creating form/input groups -->
+      <fieldset>
+        <!-- Label for the form group/fieldset is the legend -->
+        <legend>Sample Text input</legend>
+        <!--  -->
+        <p>The box and title are created by the fieldset and legend tags</p>
+        <!-- For accessibility, name for DB, ID for local JS scripts -->
+        <label for="firstName">First Name: </label>
+        <!-- Default input type is text but you should always define input text -->
+        <input name="firstName" id="firstName" type="text" />
+        <!-- Another text input with new attributes -->
+        <label for="lastName ">Last name:</label>
+        <!-- Name = where to write in the DB, Value = what to write  -->
+        <input name="lastName" id="lastName" type="text" />
+        <br />
+        <label for="age">Age: </label> 
+        <br />
+        <!-- Type number only allows characters that are math related -->
+        <input type="number" name="age" id="age">
+      </fieldset>
+      <button role="button">Sign Up!</button>
+    </form>
+  </body>
+</html>
+
