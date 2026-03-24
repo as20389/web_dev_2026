@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angela Sun | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4d6d8;
+      color: #1f1a1d;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .script-title {
+      font-family: "Brush Script MT", cursive;
+      font-size: 3.2rem;
+      font-weight: normal;
+    }
+
+    .section-title {
+      font-family: "Brush Script MT", cursive;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1f1a1d;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(244, 214, 216, 0.95);
+      border-bottom: 2px solid #d795a2;
+      backdrop-filter: blur(6px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a:hover {
+      color: #db6f96;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f4d6d8 0%, #f8dfe5 45%, #ffd0dd 100%);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    .hero::before {
+      width: 260px;
+      height: 260px;
+      background-color: #f6b5c8;
+      top: -40px;
+      right: -70px;
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      background-color: #f0a3b7;
+      bottom: 50px;
+      left: -50px;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 5rem;
+      line-height: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      max-width: 550px;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: bold;
+      border: 2px solid #1f1a1d;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: #ef8db2;
+      color: white;
+      border-color: #ef8db2;
+    }
+
+    .btn-primary:hover {
+      background-color: #db6f96;
+      border-color: #db6f96;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary:hover {
+      background-color: #ffffff90;
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      background-color: #fff7f8;
+      border: 3px solid #d795a2;
+      border-radius: 26px;
+      padding: 22px;
+      box-shadow: 10px 10px 0 #efb8c8;
+    }
+
+    .fake-window-bar {
+      background-color: #f6b5c8;
+      border-radius: 14px 14px 0 0;
+      padding: 10px 14px;
+      margin: -22px -22px 20px -22px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .profile-box {
+      background: linear-gradient(180deg, #d7ebff 0%, #dff5ff 60%, #d5edb4 60%, #9eb635 100%);
+      height: 330px;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #8e82d9;
+    }
+
+    .cloud {
+      position: absolute;
+      width: 120px;
+      height: 55px;
+      background-color: white;
+      border-radius: 50px;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      width: 50px;
+      height: 50px;
+      top: -20px;
+      left: 16px;
+    }
+
+    .cloud::after {
+      width: 60px;
+      height: 60px;
+      top: -24px;
+      right: 16px;
+    }
+
+    .hill-back,
+    .hill-front {
+      position: absolute;
+      width: 150%;
+      left: -20%;
+      border-radius: 50%;
+    }
+
+    .hill-back {
+      height: 130px;
+      background-color: #c7d69d;
+      bottom: 70px;
+    }
+
+    .hill-front {
+      height: 120px;
+      background-color: #8aa10f;
+      bottom: -15px;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .about-text,
+    .about-photo-box,
+    .experience-card,
+    .project-card,
+    .contact-card {
+      background-color: #fff7f8;
+      border: 2px solid #d9a6b1;
+      border-radius: 24px;
+      box-shadow: 8px 8px 0 #efc2cc;
+    }
+
+    .about-text {
+      padding: 28px;
+    }
+
+    .about-text p {
+      margin-bottom: 12px;
+    }
+
+    .about-photo-box {
+      padding: 22px;
+      text-align: center;
+    }
+
+    .about-photo-box img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 18px;
+      margin-bottom: 14px;
+    }
+
+    .caption {
+      font-style: italic;
+      color: #8c5c69;
+    }
+
+    .experience-grid,
+    .projects-grid {
+      display: grid;
+      gap: 26px;
+    }
+
+    .experience-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .experience-card {
+      padding: 24px;
+      text-align: center;
+    }
+
+    .experience-card h3 {
+      background-color: #ef8db2;
+      color: white;
+      padding: 10px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .experience-card p {
+      text-align: left;
+      font-size: 0.98rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-card {
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-image {
+      height: 180px;
+      background: linear-gradient(135deg, #f48fb9, #eb79a8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .project-info {
+      padding: 20px;
+    }
+
+    .project-info h3 {
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #f8dbe3;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-top: 10px;
+      margin-right: 8px;
+    }
+
+    .contact-card {
+      padding: 30px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-links {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      padding: 10px 18px;
+      border-radius: 999px;
+      background-color: #ef8db2;
+      color: white;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px 40px;
+      color: #6e4f58;
+    }
+
+    @media (max-width: 950px) {
+      .hero-content,
+      .about-grid,
+      .experience-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text h1 {
+        font-size: 3.8rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+
+      .script-title,
+      .section-title {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">ANGELA</div>
+        <ul class="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#bio">BIO</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>ANGELA<br>SUN</h1>
+        <p>
+          Hi! I'm Angela, a current student at NYU studying Integrated
+          Digital Media. I love to make practical and simple designs,
+          and I love to make cute visuals and grow my technical skills
+          in various programs. Hope you enjoy checking out my portfolio!
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#bio" class="btn btn-secondary">About Me</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="fake-window-bar">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="profile-box">
+          <div class="cloud"></div>
+          <div class="hill-back"></div>
+          <div class="hill-front"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bio">
+    <div class="container">
+      <h2 class="section-title">Bio</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a student who is interested in creativity, communication, and technology.
+            I like exploring design ideas, building beginner-friendly coding projects,
+            and finding ways to make my work feel welcoming and visually interesting.
+          </p>
+          <p>
+            This portfolio is a collection of my experiences, class projects, and
+            personal growth. I wanted it to feel soft, playful, and polished while
+            still being simple enough for a class website.
+          </p>
+          <p>
+            A few things that represent me are learning, organization, design,
+            collaboration, and trying new things even when I am still a beginner.
+          </p>
+        </div>
+
+        <div class="about-photo-box">
+          <img src="picture_of_me.png" alt="Placeholder for Angela's photo">
+          <p class="caption">Love to learn, learn to love.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <h3>Work Experience</h3>
+          <p>
+            I've worked in various locations before, such as Kumon, theCoderSchool,
+            and as an office assistant here at NYU!
+          </p>
+        </div>
+
+        <div class="experience-card">
+          <h3>Volunteer Experience</h3>
+          <p>
+            I've volunteered in a number of libraries before, mostly in the
+            Somerset County Library System of NJ. I've also volunteered
+            in two Chinese schools, one summer program and one school
+            program.
+          </p>
+        </div>
+
+        <div class="experience-card">
+          <h3>Digital Experience</h3>
+          <p>
+            I've used Google Sites, Photoshop, Canva, InDesign,
+            Premiere, and Illustrator to create my designs and I'm currently
+            learning how to use GitHub and Visual Studio Code.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">PROJECT 1</div>
+          <div class="project-info">
+            <h3>FUTURE PROJECT</h3>
+            <p>Will insert future projects that I create into here</p>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">PROJECT 2</div>
+          <div class="project-info">
+            <h3>FUTURE PROJECT</h3>
+            <p>Will insert future projects that I create into here</p>
+            <span class="tag">Python</span>
+            <span class="tag">School</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">PROJECT 3</div>
+          <div class="project-info">
+            <h3>FUTURE PROJECT</h3>
+            <p>Will insert future projects that I create into here</p>
+            <span class="tag">Design</span>
+            <span class="tag">Creative</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">PROJECT 4</div>
+          <div class="project-info">
+            <h3>FUTURE PROJECT</h3>
+            <p>Will insert future projects that I create into here</p>
+            <span class="tag">Teamwork</span>
+            <span class="tag">Presentation</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">PROJECT 5</div>
+          <div class="project-info">
+            <h3>FUTURE PROJECT</h3>
+            <p>Will insert future projects that I create into here</p>
+            <span class="tag">Writing</span>
+            <span class="tag">Research</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">PROJECT 6</div>
+          <div class="project-info">
+            <h3>FUTURE PROJECT</h3>
+            <p>Will insert future projects that I create into here</p>
+            <span class="tag">Ideas</span>
+            <span class="tag">Planning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-card">
+        <p>
+          Thanks for visiting my portfolio! You can update this section with your
+          school email, LinkedIn, GitHub, or any other contact information your class allows.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:as20389@nyu.edu">Email Me</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
