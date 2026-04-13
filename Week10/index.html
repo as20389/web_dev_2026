@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects Lesson</title>
+</head>
+<body>
+    <h1>Open the Console to see your output!</h1>
+
+    <script>
+        // Step 1: Create the book object
+        const book = {
+            title: "The Great Gatsby",
+            author: "F. Scott Fitzgerald",
+            pages: 180,
+            isAvailable: true
+        };
+
+        // Step 2: Log the title (dot notation)
+        console.log(book.title);
+
+        // Step 3: Log the author (bracket notation)
+        console.log(book["author"]);
+
+        // Step 4: Add a new property
+        book.genre = "Fiction";
+
+        // Step 5: Update isAvailable
+        book.isAvailable = false;
+
+        // Step 6: Add a method
+        book.describe = function () {
+            console.log(this.title + " by " + this.author + " - " + this.pages + " pages");
+        };
+
+        // Step 7: Call the method
+        book.describe();
+
+        // Step 8: Log all property names
+        console.log(Object.keys(book));
+    </script>
+</body>
+</html>
