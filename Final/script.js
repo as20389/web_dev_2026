@@ -1,7 +1,16 @@
-function goToPage(page) {
-  document.body.classList.add("fade-out");
+// fade in when page loads
+document.body.style.opacity = "0";
 
-  setTimeout(function() {
-    window.location.href = page;
-  }, 500);
-}
+window.addEventListener("load", function () {
+  document.body.style.transition = "opacity 0.6s ease";
+  document.body.style.opacity = "1";
+});
+
+// cute click animation for album cards
+const albumCards = document.querySelectorAll(".album-card");
+
+albumCards.forEach(function (card) {
+  card.addEventListener("click", function () {
+    card.style.transform = "scale(0.96)";
+  });
+});

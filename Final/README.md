@@ -1,68 +1,47 @@
 # Digital Memory Scrapbook
 
-## Project Overview
-This project is a multi-page digital photo scrapbook website created for my Intro to Web Development course. The goal of this project was to design an interactive and visually appealing way to organize and display photo collections.
+A soft, interactive scrapbook-style website created for my Intro to Web Dev course.  
+This project is designed to feel like a cozy digital archive of small, personal moments.
 
-The website features a soft, pink, scrapbook-inspired aesthetic with multiple gallery pages. Users can click on albums from the main page and navigate to different pages with additional images, creating a layered browsing experience.
+## Overview
 
----
+This scrapbook is a multi-page website where users can explore different “albums” of memories. Each album opens into its own gallery, where it'll eventually show pictures of my own personal life.
 
 ## Features
-- Multi-page website structure (home page + gallery pages)
-- Clickable photo albums that link to separate pages
-- Smooth navigation between pages
-- Soft, scrapbook-inspired visual design (pink theme, cute styling)
-- Hover and transition effects for a more interactive experience
-- Organized layout for displaying multiple photo collections
 
----
+- Responsive design using Bootstrap
+- Custom CSS styling with a soft pink scrapbook aesthetic
+- Floating background animations (hearts + flowers)
+- Smooth hover and click interactions
+- Randomized images using Picsum API
+- Multi-page navigation between galleries
 
 ## Technologies Used
-- HTML (structure of the website)
-- CSS (styling, layout, and visual design)
-- Basic animations and transitions using CSS
 
----
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
 
-## 💡 Process
-I started by creating a basic gallery layout using HTML. Then, I expanded the project into a multi-page website where each album links to its own gallery page. 
+## Responsiveness
 
-After structuring the pages, I focused on improving the design by applying a consistent color palette and adding decorative elements to match a scrapbook aesthetic. I also implemented CSS transitions and hover effects to make the site feel more interactive and smooth.
+The site is optimized for both desktop and mobile devices using:
+- Bootstrap’s grid system
+- Custom media queries for smaller screens
+- Adjusted animation intensity for mobile performance
 
----
+## Design Inspiration
 
-## Challenges
-Some challenges I encountered during this project included:
-- Linking multiple HTML pages correctly
-- Making sure CSS styles applied consistently across all pages
-- Adjusting layouts so the galleries looked visually balanced
-- Debugging issues where elements were not displaying as expected
+This project was inspired by:
+- Scrapbooks and photo albums
+- Soft, pastel color palettes
+- Playful and nostalgic UI design
 
-Through troubleshooting and testing, I was able to resolve these issues and improve the overall functionality of the site.
+The goal was to combine technical structure with a warm, personal visual style.
 
----
+## Future Improvements
 
-## What I Learned
-- How to structure and organize a multi-page website
-- How HTML and CSS work together to create a cohesive design
-- How to use CSS for styling, layout, and simple animations
-- How to debug and fix issues in web development projects
-
----
-
-## Next Steps
-If I had more time, I would:
-- Add more advanced animations and transitions
-- Make the website fully responsive for mobile devices
-- Replace placeholder images with personal content
-- Add more interactivity using JavaScript
-
----
-
-## Live Site
-[View the Live Website](PASTE_YOUR_LINK_HERE)
-
----
-
-## Documentation
-[View Project Documentation](PASTE_YOUR_LINK_HERE)
+- Add real personal images instead of placeholders
+- Include background music toggle
+- Add page transition animations (like scrapbook “page flips”)
+- Improve interactivity within gallery pages
