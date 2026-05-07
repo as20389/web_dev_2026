@@ -1,0 +1,40 @@
+/*always start with the most genegeral application and
+then go down and get more specific*/
+/* to zero out crappy edge margins */
+html
+body {
+  margin:0
+}
+
+/* some generic styles for our div elements */
+div{
+  border: 1px solid red;
+  background-color: rgba(255, 150, 50, 0.2);
+
+}
+
+.abs-no-parent-pos{
+  background-color: cornflowerblue;
+  width: 50%;
+  position: absolute;
+  top: 20%;
+  right: 20pix;
+  
+}
+
+.rel-parent-pos{
+  width: 50%;
+  height: 100%;
+  background-color: blueviolet;
+  position: relative;
+  right: -300;
+  
+}
+
+.abs-relative-parent-pos{
+  background-color: rgb(12, 237, 16);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+}
