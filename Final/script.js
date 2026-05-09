@@ -1,4 +1,3 @@
-// fade in when page loads
 document.body.style.opacity = "0";
 
 window.addEventListener("load", function () {
@@ -6,7 +5,6 @@ window.addEventListener("load", function () {
   document.body.style.opacity = "1";
 });
 
-// cute click animation for album cards
 const albumCards = document.querySelectorAll(".album-card");
 
 albumCards.forEach(function (card) {

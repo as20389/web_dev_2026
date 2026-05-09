@@ -18,8 +18,6 @@ body {
   overflow-x: hidden;
 }
 
-/* floating decorations */
-
 .floating-background,
 .floating {
   position: fixed;
@@ -75,8 +73,6 @@ body {
   animation-delay: 4s;
 }
 
-/* gallery floating elements */
-
 .f1 {
   top: 12%;
   left: 8%;
@@ -110,8 +106,6 @@ body {
     transform: translateY(0px) rotate(0deg);
   }
 }
-
-/* hero section */
 
 .hero {
   position: relative;
@@ -164,8 +158,6 @@ h1 {
   color: #c76385;
   transform: translateY(-3px);
 }
-
-/* albums */
 
 .album-section {
   position: relative;
@@ -230,8 +222,6 @@ h1 {
   opacity: 0.9;
 }
 
-/* gallery pages */
-
 .gallery-header {
   position: relative;
   z-index: 1;
@@ -271,8 +261,6 @@ h1 {
 .gallery-photo:hover {
   transform: scale(1.03) rotate(-1deg);
 }
-
-/* mobile */
 
 @media (max-width: 768px) {
 
